@@ -1,0 +1,8 @@
+parameters:
+     social_sandbox_user_provider.class: SocialSandbox\UserBundle\Security\Provider\SocialUserProvider
+     social_sandobox_user_manager: @fos_user.user_manager
+
+services:
+     social_sandbox_user_provider:
+         class: %social_sandbox_user_provider.class%
+         arguments: [%social_sandobox_user_manager%, { facebook: facebook_id } ] #options array e.g {facebook: facebook_id, google: google_id}
