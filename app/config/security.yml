@@ -16,10 +16,10 @@ security:
             oauth:
                 resource_owners:
                     facebook: "/login/check-facebook"
-                 login_path:        /login
-                 failure_path:      /login
-                 oauth_user_provider:
-                    service: %social_sandbox_user_provider%
+                login_path:        /login
+                failure_path:      /login
+                oauth_user_provider:
+                    service: social_sandbox.user_provider
 
             form_login:
                 provider: fos_userbundle
